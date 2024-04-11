@@ -22,6 +22,19 @@ export default ({ command, mode }: ConfigEnv) => {
                 useDevMode: isProduction ? false : true, // useDevMode = true 则不使用热更新插件，useDevMode = false 则能使用热更新，但无法作为子应用加载
             }),
             react(),
-        ]
+        ],
+        css: {
+            preprocessorOptions: {
+              less: {
+                modifyVars: {
+                  // 引入全局base.less
+                  // hack: `true; @import (reference) "${resolve(
+                  //   'src/assets/base.less'
+                  // )}";`,
+                },
+                javascriptEnabled: true,
+              },
+            },
+          },
     }
 }
