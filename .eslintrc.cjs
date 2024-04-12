@@ -5,6 +5,7 @@ module.exports = {
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:react-hooks/recommended',
+    'plugin:prettier/recommended'
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
   parser: '@typescript-eslint/parser',
@@ -28,7 +29,7 @@ module.exports = {
     semi: ['off'], // 要求或禁止使用分号代替 ASI
     'no-unused-vars': ['warn'], // 禁止出现未使用过的变量
     'no-var': ['error'], // 禁止使用var
-    quotes: ['off'], // 强制使用一致的反勾号、双引号或单引号
+    quotes: ['error', 'single', {'avoidEscape': true}], // 强制使用一致的反勾号、双引号或单引号，要求使用单引号，但允许在字符串中出现单引号时使用双引号以避免转义字符
     indent: ['warn', 2, { SwitchCase: 1 }], // 设置缩进为4,临时
     'arrow-spacing': ['off'], // 强制箭头函数的箭头前后使用一致的空格
     'object-curly-spacing': ['off'], // 强制在大括号中使用一致的空格
