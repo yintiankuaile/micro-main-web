@@ -1,7 +1,7 @@
 # micro-main-web
 
 #### Description
-{**When you're done, you can delete the content in this README and update the file with details for others getting started with your repository**}
+微应用主应用，架构主要使用qiankun技术架构
 
 #### Software Architecture
 Software architecture description
